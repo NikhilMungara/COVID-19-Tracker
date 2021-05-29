@@ -15,6 +15,11 @@ public class HomeController {
     @Autowired
     ServiceData data;
 
+    /**
+     *  To fetch the COVID Data
+     * @param model
+     * @return
+     */
     @GetMapping("/")
     public String home(Model model){
         List<LocationStats> allStats = data.getStats();
