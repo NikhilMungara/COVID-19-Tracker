@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div class="container">
+    <head>
+        <title>Coronavirus Tracking Application</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+              crossorigin="anonymous">
+    </head>
+
+    <h1>Coronavirus Tracking Application</h1>
+    <p>This application lists the total number of COVID-19 cases reported across the US.</p>
+
+    <body>
+
+    <button type="button" class="btn btn-primary">
+        Total cases reported as of today:<span class="badge badge-light" th:text="${totalReportedCases}"></span>
+    </button>
+
+    <!--<p th:text="${Statistics}"></p>-->
+
+    <table class="table">
+        <tr>
+            <th>State</th>
+            <th>Country</th>
+            <th>Total Cases</th>
+            <th>Changes since last day</th>
+        </tr>
+        <tr th:each="Statistic : ${Statistics}">
+            <td th:text="${Statistic.state}"></td>
+            <td th:text="${Statistic.country}"></td>
+            <td th:text="${Statistic.totalCases}">0</td>
+            <td th:text="${Statistic.differenceInCasesEveryDay}">0</td>
+        </tr>
+    </table>
+    </body>
+</div>
+</html>
