@@ -1,5 +1,5 @@
 # COVID-19-Tracker
-I'm feeding data into this application from the URL: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv".
+I'm feeding data into this web application from the URL: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv" for the purposes of this project.
 
 And here is a working screenshot of the outcome:
 
